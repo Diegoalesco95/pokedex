@@ -1,9 +1,13 @@
-import Header from 'components/Header';
+import Layout from 'components/Layout';
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <Layout>
+        <main className="min-h-screen px-2 py-8">
+          <h1>Home</h1>
+        </main>
+      </Layout>
     </>
   );
 };
