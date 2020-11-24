@@ -1,15 +1,28 @@
-import Layout from 'components/Layout';
+import getPokemons from 'helpers/getPokemons';
 
-const Home = () => {
+import Layout from 'components/Layout';
+import Pokemons from 'components/Pokemons';
+
+const Home = ({ pokemons }) => {
   return (
     <>
       <Layout>
         <main className="min-h-screen px-2 py-8">
-          <h1>Home</h1>
+          <Pokemons pokemons={pokemons} />
         </main>
       </Layout>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const pokemons = await getPokemons('pokemon');
+
+  return {
+    props: {
+      pokemons,
+    },
+  };
+}
 
 export default Home;

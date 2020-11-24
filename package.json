@@ -13,10 +13,12 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.0.2",
+    "axios": "^0.21.0",
     "next": "^10.0.3",
     "postcss": "^8.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "swr": "^0.3.9",
     "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
