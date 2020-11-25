@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import Card from 'components/Card';
+import CardSkeleton from 'components/CardSkeleton';
 import TableRow from 'components/TableRow';
 
 const Pokemons = () => {
@@ -44,7 +45,7 @@ const Pokemons = () => {
         </table>
       </div>
       <div className="relative sm:mx-4 sm:w-1/2 lg:w-2/5 xl:w-1/4">
-        {isPokemon ? <Card pokemon={pokemon} /> : null}
+        {isPokemon ? <Card pokemon={pokemon} /> : <CardSkeleton />}
       </div>
     </section>
   );

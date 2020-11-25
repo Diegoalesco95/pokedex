@@ -15,13 +15,13 @@ const Card = ({ pokemon }) => {
         pokemon.types[0].type.name
       )}`}
     >
-      <div className="h-full w-full">
+      <div className="h-full w-full overflow-hidden">
         <div className="w-full py-2 text-center bg-black bg-opacity-60 rounded-t-md">
-          <Image src={image} width="100" height="100" className="" />
+          <Image src={image} width="100" height="100" />
         </div>
         <div className="relative w-full h-56 p-4 rounded-b-md bg-white bg-opacity-60 flex flex-col items-center">
           <span
-            className={`absolute -top-4 right-4 w-20 p-1 text-sm text-center tracking-widest text-gray-100 uppercase rounded-md bg-gradient-to-r ${typeColor(
+            className={`absolute z-10 -top-4 right-4 w-20 p-1 text-sm text-center tracking-widest text-gray-100 uppercase rounded-md bg-gradient-to-r ${typeColor(
               pokemon.types[0].type.name
             )}`}
           >
