@@ -4,12 +4,12 @@ import Layout from 'components/Layout';
 import List from 'components/List';
 // import Paginator from 'components/Paginator';
 
-const Home = ({ pokemons }) => {
+const Home = () => {
   return (
     <>
       <Layout>
         <main className="min-h-screen px-2 py-8">
-          <List pokemons={pokemons} />
+          <List />
           {/* <Paginator count={pokemons.count} index={52} /> */}
         </main>
       </Layout>

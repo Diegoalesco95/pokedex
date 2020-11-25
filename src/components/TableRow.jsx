@@ -17,7 +17,7 @@ const TableRow = ({ url, selected }) => {
 
   const handleClick = useCallback(() => {
     dispatch({ type: SET_POKEMON, payload: pokemon });
-  });
+  }, [pokemon]);
 
   return (
     <tr

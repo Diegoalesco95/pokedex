@@ -5,7 +5,7 @@ import initialState from 'state/initialState';
 import 'styles/index.css';
 
 function MyApp({ Component, pageProps }) {
-  const store = useStore(initialState);
+  const store = useStore({ data: { ...pageProps, ...initialState.data } });
 
   return (
     <Provider store={store}>

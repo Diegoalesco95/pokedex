@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import Card from 'components/Card';
 import TableRow from 'components/TableRow';
 
-const Pokemons = ({ pokemons }) => {
+const Pokemons = () => {
   const {
-    data: { pokemon },
+    data: { pokemons, pokemon },
   } = useSelector((state) => state);
 
   const isPokemon = Object.keys(pokemon).length > 0;
