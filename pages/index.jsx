@@ -1,14 +1,14 @@
 import getPokemons from 'helpers/getPokemons';
 
 import Layout from 'components/Layout';
-import Pokemons from 'components/Pokemons';
+import List from 'components/List';
 
 const Home = ({ pokemons }) => {
   return (
     <>
       <Layout>
         <main className="min-h-screen px-2 py-8">
-          <Pokemons pokemons={pokemons} />
+          <List pokemons={pokemons} />
         </main>
       </Layout>
     </>
