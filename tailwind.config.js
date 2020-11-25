@@ -70,6 +70,7 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      fadeIn: 'fadeIn 300ms ease-in forwards',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
@@ -423,6 +424,11 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      fadeIn: {
+        to: {
+          opacity: 1,
         },
       },
     },

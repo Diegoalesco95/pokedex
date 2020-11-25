@@ -9,9 +9,10 @@
       "alias": {
         "map": [
           ["components", "./src/components"],
-          ["styles", "./src/styles"],
           ["helpers", "./src/helpers"],
-          ["hooks", "./src/hooks"]
+          ["hooks", "./src/hooks"],
+          ["state", "./src/state"],
+          ["styles", "./src/styles"]
         ],
         "extensions": [".js", ".jsx"]
       }

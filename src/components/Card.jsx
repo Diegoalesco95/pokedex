@@ -1,13 +1,8 @@
 import Image from 'next/image';
 
-import usePokemon from 'hooks/usePokemon';
 import typeColor from 'helpers/typeColor';
 
-const Card = ({ url }) => {
-  const { pokemon, isLoading } = usePokemon(url);
-
-  if (isLoading) return <p>Loading</p>;
-
+const Card = ({ pokemon }) => {
   const image = pokemon.sprites.other.dream_world.front_default;
 
   const isHiddenAbility = pokemon.abilities.find((element) => {
@@ -16,13 +11,13 @@ const Card = ({ url }) => {
 
   return (
     <div
-      className={`max-w-xs h-96 p-4 mx-auto border rounded-lg shadow-xl flex flex-col items-center bg-gradient-to-r ${typeColor(
+      className={`max-w-xs h-96 p-4 mx-auto rounded-lg shadow-2xl flex flex-col items-center opacity-0 animate-fadeIn bg-gradient-to-r ${typeColor(
         pokemon.types[0].type.name
       )}`}
     >
       <div className="h-full w-full">
         <div className="w-full py-2 text-center bg-black bg-opacity-60 rounded-t-md">
-          <Image src={image} width="100" height="100" />
+          <Image src={image} width="100" height="100" className="" />
         </div>
         <div className="relative w-full h-56 p-4 rounded-b-md bg-white bg-opacity-60 flex flex-col items-center">
           <span
