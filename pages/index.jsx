@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import getPokemons from 'helpers/getPokemons';
 
 import Layout from 'components/Layout';
@@ -8,6 +10,15 @@ import Favorites from 'components/Favorites';
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Pokédex</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/images/pokeball.png"
+        />
+      </Head>
       <Layout>
         <main className="min-h-screen px-2 py-8">
           <List />
