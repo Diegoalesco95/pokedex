@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-import usePokemons from 'hooks/usePokemon';
+import usePokemon from 'hooks/usePokemon';
 import typeColor from 'helpers/typeColor';
 
 const Card = ({ url }) => {
-  const { pokemon, isLoading } = usePokemons(url);
+  const { pokemon, isLoading } = usePokemon(url);
 
   if (isLoading) return <p>Loading</p>;
 

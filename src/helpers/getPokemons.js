@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-async function getPokemons(endpoint) {
-  const { data } = await axios.get(`${process.env.API_URL}/${endpoint}`);
+async function getPokemons(url) {
+  const { data } = await axios.get(url);
   return data;
 }
 
