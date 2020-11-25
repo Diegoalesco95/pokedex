@@ -2,6 +2,7 @@ import getPokemons from 'helpers/getPokemons';
 
 import Layout from 'components/Layout';
 import List from 'components/List';
+import Favorites from 'components/Favorites';
 // import Paginator from 'components/Paginator';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <Layout>
         <main className="min-h-screen px-2 py-8">
           <List />
+          <Favorites />
           {/* <Paginator count={pokemons.count} index={52} /> */}
         </main>
       </Layout>

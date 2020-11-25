@@ -18,6 +18,22 @@ const pokemonsReducer = (state, { type, payload }) => {
           pokemon: payload,
         },
       };
+    case types.SET_FAVORITE:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          favorites: [...state.data.favorites, payload],
+        },
+      };
+    case types.DELETE_FAVORITE:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          favorites: payload,
+        },
+      };
     default:
       return state;
   }

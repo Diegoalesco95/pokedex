@@ -9,3 +9,13 @@ export const setPokemon = (payload) => ({
   type: types.SET_POKEMON,
   payload,
 });
+
+export const setFavorite = (payload) => ({
+  type: types.SET_FAVORITE,
+  payload,
+});
+
+export const deleteFavorite = (payload) => ({
+  type: types.DELETE_FAVORITE,
+  payload,
+});

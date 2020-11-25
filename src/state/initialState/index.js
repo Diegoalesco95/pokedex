@@ -1,6 +1,7 @@
 const initialState = {
   data: {
     pokemon: {},
+    favorites: [],
   },
 };
 

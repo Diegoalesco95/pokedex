@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import useFavorites from 'hooks/useFavorites';
 
 import Card from 'components/Card';
 import CardSkeleton from 'components/CardSkeleton';
@@ -8,6 +9,8 @@ const Pokemons = () => {
   const {
     data: { pokemons, pokemon },
   } = useSelector((state) => state);
+
+  const { handlerFavorites, isFavorite } = useFavorites();
 
   const isPokemon = Object.keys(pokemon).length > 0;
 
@@ -19,19 +22,19 @@ const Pokemons = () => {
             <tr>
               <th
                 scope="col"
-                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider"
+                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider lg:text-base"
               >
                 Name
               </th>
               <th
                 scope="col"
-                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider"
+                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider lg:text-base"
               >
                 Weight (kg)
               </th>
               <th
                 scope="col"
-                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider"
+                className="sticky top-0 px-4 py-2 bg-indigo-500 text-center text-xs font-medium text-gray-100 uppercase tracking-wider lg:text-base"
               >
                 Height (cm)
               </th>
@@ -45,7 +48,15 @@ const Pokemons = () => {
         </table>
       </div>
       <div className="relative sm:mx-4 sm:w-1/2 lg:w-2/5 xl:w-1/4">
-        {isPokemon ? <Card pokemon={pokemon} /> : <CardSkeleton />}
+        {isPokemon ? (
+          <Card
+            pokemon={pokemon}
+            handlerFavorite={handlerFavorites}
+            isFavorite={isFavorite(pokemon)}
+          />
+        ) : (
+          <CardSkeleton />
+        )}
       </div>
     </section>
   );

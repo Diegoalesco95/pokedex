@@ -1,8 +1,8 @@
 import Image from 'next/image';
-
 import typeColor from 'helpers/typeColor';
+import { MdFavorite } from 'react-icons/md';
 
-const Card = ({ pokemon }) => {
+const Card = ({ pokemon, handlerFavorite, isFavorite }) => {
   const image = pokemon.sprites.other.dream_world.front_default;
 
   const isHiddenAbility = pokemon.abilities.find((element) => {
@@ -20,6 +20,17 @@ const Card = ({ pokemon }) => {
           <Image src={image} width="100" height="100" />
         </div>
         <div className="relative w-full h-56 p-4 rounded-b-md bg-white bg-opacity-60 flex flex-col items-center">
+          <button
+            type="button"
+            className="absolute -top-4 left-4 focus:outline-none"
+            onClick={() => handlerFavorite(pokemon)}
+          >
+            <MdFavorite
+              className={`text-4xl ${
+                isFavorite ? 'text-red-500' : 'text-gray-100'
+              } `}
+            />
+          </button>
           <span
             className={`absolute z-10 -top-4 right-4 w-20 p-1 text-sm text-center tracking-widest text-gray-100 uppercase rounded-md bg-gradient-to-r ${typeColor(
               pokemon.types[0].type.name
