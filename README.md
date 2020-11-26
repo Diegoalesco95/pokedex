@@ -18,9 +18,9 @@ Building a pokedex as a practice exercise using NextJS 10 and Redux
 
 Or to run with docker:
 
-6. _`build-docker`_ to build the docker.
-7. _`build-docker-multi`_ to build a multi stage docker.
-8. _`run-docker`_ to run docker.
+6. _`npm run build-docker`_ to build the docker.
+7. _`npm run build-docker-multi`_ to build a multi stage docker.
+8. _`npm run run-docker`_ to run docker.
 
 ## 🚩 Technologies
 
