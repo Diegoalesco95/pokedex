@@ -9,7 +9,7 @@ const useFavorites = () => {
   } = useSelector((state) => state);
 
   const isFavorite = (favorite) => {
-    return favorites.includes(favorite);
+    return favorites.find((elem) => elem.id === favorite.id);
   };
 
   const deleteFavorite = (index) => {
@@ -26,14 +26,14 @@ const useFavorites = () => {
     return index;
   };
 
-  const handlerFavorites = (favorite) => {
-    if (isFavorite(favorite)) {
+  const handlerFavorites = (fav) => {
+    if (isFavorite(fav)) {
       dispatch({
         type: DELETE_FAVORITE,
-        payload: findFavoriteIndex(favorite),
+        payload: findFavoriteIndex(fav),
       });
     } else {
-      dispatch({ type: SET_FAVORITE, payload: favorite });
+      dispatch({ type: SET_FAVORITE, payload: fav });
     }
   };
 
