@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: {
-    content: ['./src/**/*.html', './src/**/*.jsx'],
+    content: ['./pages/**/*.jsx', './src/**/*.html', './src/**/*.jsx'],
     options: {
       safelist: [
         'from-gray-200',
