@@ -5,8 +5,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Pokédex</title>
-          <meta name="description" content="Pokédex" />
+          <meta
+            name="description"
+            content="Building a pokedex as a practice exercise using NextJS 10 and Redux"
+          />
           <link
             rel="icon"
             type="image/png"

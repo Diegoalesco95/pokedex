@@ -12,7 +12,7 @@ const Header = () => {
             width={128}
             height={114}
           />
-          <h1 className="text-2xl font-bold text-gray-100">Pokédex</h1>
+          <h1 className="text-2xl font-bold text-gray-100">Pokedex</h1>
         </a>
       </Link>
     </header>
