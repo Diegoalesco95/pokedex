@@ -1,7 +1,46 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: [],
+  purge: {
+    content: ['./src/**/*.html', './src/**/*.jsx'],
+    options: {
+      safelist: [
+        'from-gray-200',
+        'from-gray-400',
+        'from-gray-500',
+        'from-gray-600',
+        'from-gray-700',
+        'from-gray-800',
+        'from-purple-800',
+        'from-yellow-200',
+        'from-yellow-600',
+        'from-yellow-800',
+        'from-red-400',
+        'from-blue-200',
+        'from-blue-300',
+        'from-green-400',
+        'from-indigo-200',
+        'from-pink-300',
+        'to-gray-400',
+        'to-gray-600',
+        'to-gray-700',
+        'to-gray-800',
+        'to-gray-900',
+        'to-purple-900',
+        'to-yellow-300',
+        'to-yellow-500',
+        'to-yellow-800',
+        'to-yellow-900',
+        'to-red-500',
+        'to-red-700',
+        'to-blue-300',
+        'to-blue-500',
+        'to-green-600',
+        'to-indigo-300',
+        'to-pink-400',
+      ],
+    },
+  },
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {

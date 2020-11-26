@@ -1,8 +1,12 @@
 import Image from 'next/image';
-import typeColor from 'helpers/typeColor';
 import { MdFavorite } from 'react-icons/md';
 
-const Card = ({ pokemon, handlerFavorite, isFavorite }) => {
+import typeColor from 'helpers/typeColor';
+import useFavorites from 'hooks/useFavorites';
+
+const Card = ({ pokemon }) => {
+  const { handlerFavorites, isFavorite } = useFavorites();
+
   const image = pokemon.sprites.other.dream_world.front_default;
 
   const isHiddenAbility = pokemon.abilities.find((element) => {
@@ -23,11 +27,11 @@ const Card = ({ pokemon, handlerFavorite, isFavorite }) => {
           <button
             type="button"
             className="absolute -top-4 left-4 focus:outline-none"
-            onClick={() => handlerFavorite(pokemon)}
+            onClick={() => handlerFavorites(pokemon)}
           >
             <MdFavorite
               className={`text-4xl ${
-                isFavorite ? 'text-red-500' : 'text-gray-100'
+                isFavorite(pokemon) ? 'text-red-500' : 'text-gray-100'
               } `}
             />
           </button>

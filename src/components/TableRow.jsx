@@ -5,6 +5,7 @@ import { SET_POKEMON } from 'state/types';
 import usePokemon from 'hooks/usePokemon';
 
 const TableRow = ({ url, selected }) => {
+  const dispatch = useDispatch();
   const { pokemon, isLoading } = usePokemon(url);
 
   let isSelected;
@@ -12,8 +13,6 @@ const TableRow = ({ url, selected }) => {
   if (!isLoading) {
     isSelected = selected.id === pokemon.id;
   }
-
-  const dispatch = useDispatch();
 
   const handleClick = useCallback(() => {
     dispatch({ type: SET_POKEMON, payload: pokemon });
