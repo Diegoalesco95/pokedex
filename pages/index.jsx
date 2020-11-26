@@ -10,7 +10,7 @@ const Home = () => {
       <Head>
         <title>Pokedex</title>
       </Head>
-      <main className="relative flex flex-col items-center px-2 py-8">
+      <main className="relative min-h-screen flex flex-col items-center px-2 py-8">
         <List />
         <Favorites />
       </main>
