@@ -13,7 +13,7 @@ class MyDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href="/images/pokeball.png"
+            href="/pokeball.png"
           />
         </Head>
         <body>
