@@ -9,7 +9,7 @@
     "start": "next start",
     "build-docker": "docker build -t next-app .",
     "build-docker-multi": "docker build --target production -t next-app -f ./Dockerfile.multistage .",
-    "run-docker": "docker run --rm -it -p 3000:3000 --env API_URL=https://pokeapi.co/api/v2 next-app"
+    "run-docker": "docker run --rm -it -p 3000:3000 next-app"
   },
   "keywords": [],
   "author": "Diego Osorio <Diegoalesco95@hotmail.com>",

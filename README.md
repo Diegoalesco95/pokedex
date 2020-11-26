@@ -16,6 +16,12 @@ Building a pokedex as a practice exercise using NextJS 10 and Redux
 4. _`npm run build`_ to export to production.
 5. _`npm run start`_ to run production environment.
 
+Or to run with docker:
+
+6. _`build-docker`_ to build the docker.
+7. _`build-docker-multi`_ to build a multi stage docker.
+8. _`run-docker`_ to run docker.
+
 ## 🚩 Technologies
 
 - [React](https://reactjs.org/)
